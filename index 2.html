@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Alfa Daddy · Tracker</title>
+<meta name="description" content="Alfa Daddy Diet v11.0 daily tracker. Data stays on this device.">
+<meta name="theme-color" content="#0c5a44">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Alfa Daddy">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAObUlEQVR4nO2de3AV1R3Hv3sfeRGSEBIIgQQCJkAghLx4GTAUVF6mUJJQsTOltdNxrGI7o+M4amtbtWM7tbUwgzrVUUdbsYKACj7IwAiC4ZkYkhAg8gohD94JecPtH0wQIbl79t7du7uH72fmzDDh7NnfnvPNL7/zO2fPKuFLZ8MCeMw2gOiCYrYBLpPuSwHLyc3jGnCBB1LQFPHtx41jHhBxGy1oipj0EBBxuwxqmkIm3ujRh+7qcxnQJsVMRPFAZwHqGXJQyMQXdPXWDj0aAcVM/EcXDfkbQ1PIRE/89tb+eGiKmRiFz9rydVJIMROj8WnC6IuHpphJoNCsNZei7XeAYiaBRpOn1uKhKWZiFsLaExU0xUzMRkiDLqjHHBQzsQqq4YdeCyuEWAI1QdM7E6vhVZPeBE0xE6vSpzaN2j5KiCn0tVJI70ysTq8TxN5CDoqZ2IVbtMosB5GKm2NoemdiN34Qerg4JyQyYcQ7hYSYxo0xNMMNYleua5d5aCIVzHIQqegRNMMNYnc8gNj2UUJsA0MOIhUUNJEKBxg/E3nwMG1HpIIrhUQquJeDSAUnhUQqGEMTqaCHJlLBSSGRCnpoIhWMoYlU0EMTqaCgiVRw+yiRCnpoIhUUNJEK7uUgUsG0HZEKrhQSqWAMTaSCgiZSwRiaSAU9NJEKTgqJVNBDE6lgDE2kgh6aSAUFTaTCpUi+ffTJeUvw5PyfarrmvZ3FePTdlQZZ9D1NK9bA6dDHp3R0d6GjqwvtXZ0423IJ9RfPoe7CWRxuOIXy2qM4UHsUTc0XdbmXlXGZbYDRFOTcpfma/IypeHz1a+jo6jLAImMIdrkR7HIjIjQMgyKiMDY+8ZY6VXUnsKWqFBu/3YWdNZXweOQ71lBqQWcnpWDUoCGar+sfEoa5aZOwbt/XBlhlHmPjEzE2PhEPz8rH0TP1eHfHZrzx1SZcams12zTdkDqGLsrJ8/3aSdo9u51IionDs/k/Q9mfX8cTc4sQGhRstkm64IACyFjcLicWZd3pc8fMSs3EwP4RxtppASJD++GpBfdj+9P/RG7KeNPHzd/iMN0Cg8rs1CwMDI/wPppecDudWJSZa7Cd1iEpJg7rl/8JT81fCkVxwOzx87VIG3LoETIU+TChtDOKouCJuYV468EnEOxym22OT0gp6IjQMMwZn+N3O9lJKRgZq31SaXfumzgFbz74OFwOp9mmaEbKpe/8jGkIdnv3MC0dbai/eA53DBrqtV7hpBl4aeNqPc3TTN2Fs/j9urf7/H8FCkLcQQgPDsGQqGgkxcQhPXEUEqMH+XzPuWk5eOWBh/Gbd1f43IYZSJm2WyIQbmw/fACH6muxfPYir/UKs80X9KW2Vqzdu13zdcMHDsa8CZOw7M57kDzY+y9ub9w/eSZKvjuId3Z8qflas5BuUjhsQCymjUpVffDiylJ8dmCvar2RsUOQkzTGIHu1oL3942cbsWrLJ5j8/HL8/I2/4diZBo33BF4q+BWSYoYY9PycFKpSmDMDIsv5X1bsw+6j1Tjbckm1blHODD1MM5WPS79B7l9+h/+WbNV0XbDbjed/sswQm4zAoSiATEUkM1FZdxwnzzfiqucqvqhQ99ILM6chyOXU3VYt6HG/tq4OPPLeCvx10wea7j03LQe5KeNMH1uRIpWHTk8YhdFxw1TrfVz2zfV/byzfpVp/YL8IzBqb4ZdtVuKlTavx2tZPNV3zyI9+bJA1+iKVoEVDg49Lvxf0loNlaO/qFGhbrpz0s+vewr7jh4Xr352aaYsUpsP0vxE6FafTicVZuaoPfKSxDlX1J69f19bVia3V36peN2d8DvqHhpkTcyjQvb+ueDx47P1VuCq4405RFCzKyjV9nNWKNB46b3Q6YvtHqdZbv3/HLT+7MQTpi2C3G/kTp/pimmWprDuBNRrSgQsmTDLQGn2QRtCi4cb60p23/Gxj+S50XulWvXaJZGEHAPx72ybhuhOGjUSMH/tjAoEUgu4XHIL5aereo6axDhV1x2/5+aW2Vmw5WKZ6/bRRqRgaFeOTjVZlz7FDOHqmXrh+5vBkA63xHym2jy5Inyy0n3d92c4+21hXemsocjOKoqAgO1c/27VgYP9trtwnbEZG4ijTx9tbkWKlUDQUWLd/Z59tbCrfjY5u9VeurmU79LJdC8b13x4N2Y5Rg+INtcXfYvuQIy5yAKYnp6nWq2k63Wu40UNze5tQ2DEmLgFpQ0doMdHylJ86Jlx32ABrh1y2F3RB1vRry50qrOslu+FLHeDahiWZOHmuSbiu1ecQto+hiwTF5S1+7imbKvYIhR0FWblwOBT/7deCgX3Y2tWB5vY2ITP6h4SaPubeisMCNvhcxg1JxLj44aqDcKSxDpV1x1Xbu9zRhuKq/artDY4YgLtS0vy2XwtG92VrZ7uQHaFBwaaPu7di60lhUbbYZPBa7lmszXW95Kl7ozBrhg7PoAVj+7Jd8AySIKcLVn7n0LYxtENRhJa6gd4XU/ri84q9Qns7FkwQSxXahSCX2LseHd1dlj6gxrYxdG7yeAyJjFZ9wMONp1BZf0K43cud7dgsEHb0Cw7BvLQc/55DCwb3Z4g7SMiMlvY208feW7GthxadDIqGEDci6tELs6ZrbtuKuBxORIX2E6rb0iE2eTQLWwo6xB0kvFFmQ5l2QX9euRdtnR2q9fJGT0BMeKTm9q1GXOQAiB7aedHix4bZcvvovLRJCA8OVX24Qw2nUFVfq7n91q5OfHlQPexwOZxYnOnHlkphjO3P0XEJwpbUNJ02ffy9FVu+9S0abqQMHoozfzf2je3CrOl4bdtGQ+9hNFpWPg81njLOEB2wXcgREx6JvBT1pe5AMTFhJO4YFG+2GX4xQ2DrQA+HGmoNtMR/bCfoxRl3Wu5EnyIbTw6jQvthStJo4fr7T9YYaI3/2C5tZ8XMQkHmdCi+LIVrwaD+XJgxDUGC59hVN9TixPkm0zWgkrazgBWCJXnQUExMGCnU+YEkMToWk0f4chiNFvTvT4fiwEMz5glbsLmq1BA79H0m000QL0uyrLvLrShrus3kDCzJnoE7YsXj/00Ve0zXgFqxTQytKAoWZ/h+gLnR5KdPQZDTPkmjgeEReG7+A8L1K0+fQMnRgwZapA+2iaGnjByDhOhYwzrCX6JC++Hu1AxjXLTOfelwKFi19BFNB8K/um2j6RoQKbZxKUWZYpNBj8eDOSueRVPLRV3u63Ao+GL5C4gO669atyBzOj49sFuX+xqFoih4ueDXmJkyQfiaxuYLWLPfHh9QssXH64Ncbtw3YYpQ3ZJj1dinc2ppQ1kJlk2drVrvntRMRIWG40LbZV3vfw3/xynY5caKJQ9h0cRpmq77wyfvobO7WxcbjMYWMfS9qZmIDA0TqvvhPu3nKKsh6p2CnC7kp4v94gWa7OHJKP7ti5rFvL2mwpA+NQpbnOBfmCm277nryhVsKC/R3ZGUHK/GyfNnkCDwgmhhZi7eKSnW1wDAp2dyOhy4KzkNv5x6D+5NzdR8/eXOdjyx9k07OObrWD6Gjg4Lx+wxGUJ1i6tLcb61RXcbPB4P1pZ+jcdmqp/AOXnEaCQMiMXJ8+IvnqoRERIm5FndDifCg0MwdEAMxgwehskjxgj/ZbuZqx4PHvrPShxpqvPperOwvKAXpk+F2ym21P3hfuP+NK7ZLyZoRVFQkJmLfxR/pNu94yOj8frSR3VrT4QXP1uNzyrVz862GpbfPlogmN1o6WjH51X7DbOjqqH22qmlAhSKbim1KH/54n94ZesG08fel2LpSeGIgYORI3iW2icHdgm9C+gPon8BkmPjMXGY9Zbo1ei+egWPfvAqXtbxr0ugsbSgCzPEJoOAeCbCH9aW7hR+QVSL7VaguuEUFqz6I97f+5XZpviFpfdyiGY3GpsvYHtNheH2nLpwBiXHqoVsWjRxKlwO7wuxVqCzuwsvF3+EWa88hX0njpg+5v4Wy6btshOTkTRwsFDdj8p24ornakBUsqb0a0xJGqNaLzY8EnkpE1BcXWq8UT7Q0tGOt0s249VtG9HQfOHaDy2qBS1YdqVQU7hRugOBeo4N5bvwYv4yocxLQUYuiqvLAmCVGB3dXfjqyAFsqtiLDeUluNTe88KrNTXgC5ZM27mdTixMF/v8Q82Z0yit/c5gi77nfGsLiqvLMEdgoWLeuGz0CwrBZcFjtvSgs7sLzR1taG5vw7nWFhxurENV/QlU1J/E7uOH0CrwNrudUWKfXGrdY3AI0YhlY2hCfMHSaTtCtGLZSSEhvkAPTaSCMTSRCnpoIhUUNJEKl+gxqoTYAXpoIhUUNJEKCppIBdN2RCq4UkikgiEHkQoKmkgFY2giFfTQRCo4KSRSQQ9NpMLFrRxEJuihiVRQ0EQqXFY+BZMQrdBDE6mw5MlJerJ1+Qtmm2A58v71tNkmGIbUHppi7h2Z+8U2H97UWmQeND3YuvwF08fIiMKVwtsa+cZe6pCD3H5Q0EQqpI2h81Y+o2tHyUbeymdMHyMjiqW/seJvmUlR98rMlc+YPjaGlbjnfsEDz4k0MIYmUuGCAgUAvTSRAYUemkgFBU2kgttHiVT0eGiqmtgdBWDIQSSDgiZScePJSUzfEbtyXcXcPkqkwkU5E5m4OYamvond+IFmefookYreshyUOLELt2i1r0khMx7E6vQqXOahiVR4i6HppYlV6VO1ah6a8TSxGl41yZCDSIXI9lGGHsQqqIpV1EMz9CBmI6RBLSEHRU3MQlh7WvdyMPwggUaTRH1Z+qaoSaDQrE5ft49S1MRofBKmP2k7xtTEKHzWlr+fpOi5Mb010QO/naRe20cZghB/0UWJen40iN6a+IKuoasR7xTSWxNRdBefUZ91o7cm3jAsoWD0K1g3tk5x394EJCsWyA9vUty3HwFP7Zr1JdmbH5QClwPT1yb+D0zESvxv1erTAAAAAElFTkSuQmCC">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow+Semi+Condensed:wght@400;500;600;700&display=swap');
+:root{
+  --ink:#17342b; --forest:#0c5a44; --jade:#147a5c; --jade2:#1b8a68; --mint:#e2f3ea; --mintline:#bfe3cf;
+  --paper:#f4f9f6; --card:#fff; --line:#dbe4de; --sub:#71807a; --gold:#b8871c; --goldbg:#fdf3dc; --goldline:#f0dfae;
+  --sky:#23527c; --skybg:#e3edf8; --skyline:#c5d9ee; --skyfill:#a9c4dd; --clay:#b8503c; --claybg:#fbeae7; --field:#fff; --navbg:rgba(244,249,246,.92);
+  --heat1:#cfe9dc; --heat2:#7fc7ab;
+}
+@media (prefers-color-scheme:dark){:root{
+  --ink:#e6f1ec; --forest:#0f6b52; --jade:#1c8a68; --jade2:#27a37c; --mint:#153a2f; --mintline:#22604c;
+  --paper:#0f1613; --card:#161f1b; --line:#26332d; --sub:#8fa39a; --gold:#d9a83a; --goldbg:#2e2410; --goldline:#5a4715;
+  --sky:#8fb8e0; --skybg:#16232f; --skyline:#2b4157; --skyfill:#3b5e80; --clay:#e07a63; --claybg:#331d18; --field:#111917; --navbg:rgba(15,22,19,.92);
+  --heat1:#1f4d3c; --heat2:#2a8a66;
+}}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{background:var(--paper);color:var(--ink);font-family:'Barlow Semi Condensed',system-ui,-apple-system,sans-serif;font-size:15px;line-height:1.3}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+input,textarea,select{font:inherit;color:inherit}
+.wrap{max-width:480px;margin:0 auto;padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+.hero{background:linear-gradient(115deg,#0c5a44 0%,#147a5c 70%,#1b8a68 100%);color:#fff;padding:calc(16px + env(safe-area-inset-top)) 16px 14px;border-radius:0 0 18px 18px}
+.hero .row{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.brand{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:26px;letter-spacing:.5px;line-height:1}
+.brandsub{font-size:12.5px;color:#d7ece4;margin-top:3px}
+.gear{width:36px;height:36px;border-radius:12px;background:rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.ring{position:relative;width:56px;height:56px;flex-shrink:0}
+.ring .pct{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px}
+.ring circle.fg{transition:stroke-dasharray .5s ease}
+.tally{display:flex;gap:6px;margin-top:12px}
+.tally div{flex:1;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);border-radius:12px;padding:7px 8px}
+.tally b{display:block;font-size:15px}.tally span{font-size:10.5px;color:#d7ece4;letter-spacing:.3px}
+.toggle{margin-top:10px;width:100%;display:flex;align-items:center;justify-content:space-between;border-radius:14px;padding:8px 12px;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.08)}
+.toggle.on{background:rgba(255,255,255,.16)}
+.toggle .lbl{font-size:13px;font-weight:600}
+.knob{width:40px;height:22px;border-radius:999px;background:rgba(255,255,255,.3);position:relative;transition:background .2s;flex-shrink:0}
+.knob:after{content:"";position:absolute;top:2px;left:2px;width:18px;height:18px;border-radius:999px;background:#fff;transition:left .2s,background .2s}
+.toggle.on .knob{background:#fff}.toggle.on .knob:after{left:20px;background:#0c5a44}
+.hint{font-size:11px;color:#d7ece4;margin-top:5px}
+.sess{margin-top:8px;width:100%;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.1);color:#fff;border-radius:12px;padding:7px 10px;font-size:13px}
+.sess::placeholder{color:#cfe6dc}
+.status{margin:12px 16px 0;border-radius:14px;padding:10px 12px;font-weight:700;font-size:13px}
+.status.open{background:var(--mint);color:var(--forest)}.status.fast{background:var(--skybg);color:var(--sky)}.status.closed{background:var(--claybg);color:var(--clay)}.status.late{background:var(--goldbg);color:var(--gold)}
+.nowcard{margin:12px 16px 0;border-radius:16px;padding:12px 14px;background:var(--card);border:1px solid var(--line);display:flex;align-items:center;gap:12px}
+.nowcard .k{font-size:10.5px;color:var(--sub);letter-spacing:.4px;font-weight:700}
+.nowcard .v{font-size:16px;font-weight:700}
+.nowcard .s{font-size:12px;color:var(--sub)}
+.nowcard .cta{margin-left:auto;background:var(--forest);color:#fff;border-radius:12px;padding:8px 12px;font-weight:700;font-size:13px;white-space:nowrap}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;margin:12px 16px 0;overflow:hidden}
+.card.done{border-color:var(--mintline);box-shadow:inset 0 0 0 1px var(--mintline)}
+.card.now{border-color:var(--jade);box-shadow:inset 3px 0 0 var(--jade)}
+.chead{display:flex;align-items:center;gap:8px;padding:12px 12px 6px}
+.tpill{background:var(--forest);color:#fff;border-radius:999px;padding:2px 10px;font-size:12px;font-weight:700}
+.ttl{font-weight:700;font-size:15px;flex:1;min-width:0}
+.badge{border-radius:6px;padding:2px 6px;font-size:9.5px;font-weight:700;white-space:nowrap}
+.badge.green{background:var(--mint);color:var(--forest);border:1px solid var(--mintline)}
+.badge.gold{background:var(--goldbg);color:var(--gold);border:1px solid var(--goldline)}
+.badge.sky{background:var(--skybg);color:var(--sky);border:1px solid var(--skyline)}
+.note{padding:0 12px 4px;font-size:11.5px;color:var(--gold);font-weight:600}
+.items{padding:0 8px 8px}
+.item{width:100%;display:flex;align-items:center;gap:12px;padding:8px;border-radius:14px;text-align:left;transition:transform .06s}
+.item:active{transform:scale(.985)}
+.box{width:24px;height:24px;border-radius:8px;border:2px solid var(--line);background:var(--field);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0;transition:background .15s,border-color .15s}
+.item.on .box{background:var(--jade);border-color:var(--jade)}
+.item .n{display:block;font-size:14px;font-weight:600}
+.item.on .n{color:var(--sub);text-decoration:line-through}
+.item .q{display:block;font-size:11.5px;color:var(--sub)}
+.item .m{margin-left:auto;font-size:11px;color:var(--sub);white-space:nowrap;text-align:right}
+.chips{display:flex;gap:6px;flex-wrap:wrap;padding:2px 12px 8px}
+.chip{border:1.5px solid var(--line);border-radius:999px;padding:4px 10px;font-size:12px;font-weight:600}
+.chip.on{background:var(--forest);color:#fff;border-color:var(--forest)}
+.sec{padding:12px}
+.sec h3{font-weight:700;font-size:15px}
+.sec .sub{font-size:11.5px;color:var(--sub);margin-top:2px}
+.between{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+.water{display:flex;gap:6px;margin-top:12px}
+.seg{flex:1;height:42px;border-radius:8px;border:2px solid var(--skyline);background:var(--skybg);transition:background .15s}
+.seg.train{border-style:dashed}
+.seg.on{background:var(--sky);border-color:var(--sky)}
+.nudge{display:inline-block;margin-top:8px;border-radius:999px;padding:3px 10px;font-size:11.5px;font-weight:700}
+.nudge.ok{background:var(--mint);color:var(--forest)}.nudge.behind{background:var(--goldbg);color:var(--gold)}
+.field{width:100%;border:1.5px solid var(--line);border-radius:14px;padding:9px 12px;font-size:15px;background:var(--field)}
+.field:focus{outline:2px solid var(--jade);outline-offset:1px}
+.rowg{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.btn{border-radius:14px;padding:9px 16px;font-weight:700;font-size:14px;white-space:nowrap}
+.btn.primary{background:var(--forest);color:#fff}
+.btn.ghost{border:1.5px solid var(--line)}
+.btn.danger{border:1.5px solid var(--clay);color:var(--clay)}
+.btn.dangerfill{background:var(--clay);color:#fff}
+.small{font-size:12px;color:var(--sub);margin-top:6px}
+.banner{margin:12px 16px 0;border-radius:14px;padding:12px 16px;text-align:center;background:#17342b;color:#eaf5ef;font-weight:700;font-size:15px;animation:rise .4s ease}
+@keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.pin{text-align:center;font-size:11px;color:var(--sub);margin:12px 16px 0}
+.stats{display:flex;gap:8px;margin:12px 16px 0}
+.stat{flex:1;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:10px 12px}
+.stat b{display:block;font-size:20px;font-family:'Barlow Condensed',sans-serif;font-weight:700;color:var(--forest)}
+.stat span{font-size:11px;color:var(--sub)}
+.bars{display:flex;align-items:flex-end;gap:4px;height:72px;margin-top:12px}
+.bars div{flex:1;border-radius:4px;background:var(--line);transition:height .3s}
+.axis{display:flex;justify-content:space-between;font-size:10.5px;color:var(--sub);margin-top:4px}
+.wlist div{display:flex;justify-content:space-between;font-size:12.5px;border-top:1px dashed var(--line);padding:4px 0}
+.heat{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-top:10px}
+.heat .dow{font-size:10px;color:var(--sub);text-align:center;font-weight:700}
+.heat button{aspect-ratio:1;border-radius:7px;background:var(--line);font-size:10.5px;font-weight:600;color:var(--ink)}
+.heat button.l1{background:var(--heat1)}.heat button.l2{background:var(--heat2)}.heat button.l3{background:var(--forest);color:#fff}
+.heat button.today{outline:2px solid var(--jade);outline-offset:1px}
+.heat button.future{opacity:.35}.heat button.sel{box-shadow:0 0 0 2px var(--gold)}
+.heat .blank{aspect-ratio:1}
+.mnav{display:flex;align-items:center;justify-content:space-between;margin-top:6px}
+.mnav button{padding:4px 10px;border-radius:10px;border:1.5px solid var(--line);font-weight:700}
+.daydetail{margin-top:10px;border-top:1px dashed var(--line);padding-top:8px;font-size:13px}
+.daydetail .row{display:flex;justify-content:space-between;padding:3px 0;color:var(--sub)}
+.daydetail .row b{color:var(--ink)}
+.verdict{border-radius:12px;padding:8px 10px;font-size:12.5px;margin-top:8px}
+.verdict.ok{background:var(--mint);color:var(--forest)}.verdict.slow{background:var(--goldbg);color:var(--gold)}.verdict.fast{background:var(--skybg);color:var(--sky)}
+details{border-top:1px dashed var(--line)}
+details:first-of-type{border-top:0}
+summary{list-style:none;padding:12px;font-weight:700;font-size:15px;display:flex;justify-content:space-between;align-items:center;cursor:pointer}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";color:var(--sub);font-weight:700;font-size:18px}
+details[open] summary:after{content:"–"}
+.dbody{padding:0 12px 12px;font-size:13.5px;color:var(--ink)}
+.rule{display:flex;gap:10px;padding:6px 0;border-top:1px dashed var(--line);font-size:13px}
+.rule:first-child{border-top:0}
+.rule .num{width:20px;height:20px;border-radius:999px;background:var(--forest);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.rule b{color:var(--forest)}
+.shoprow{display:flex;justify-content:space-between;gap:8px;padding:4px 0;border-top:1px dashed var(--line);font-size:13px}
+.shoprow:first-child{border-top:0}
+.shoprow .pm{color:var(--jade);font-weight:700;white-space:nowrap}
+.lever{border-radius:12px;padding:8px 10px;font-size:12.5px;margin-top:8px}
+.lever.push{background:var(--mint);color:var(--forest)}.lever.back{background:var(--goldbg);color:var(--gold)}
+.nav{position:fixed;left:0;right:0;bottom:0;background:var(--navbg);backdrop-filter:blur(8px);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+.nav .in{max-width:480px;margin:0 auto;display:flex}
+.nav button{flex:1;padding:11px 0 10px;font-weight:700;font-size:13px;color:var(--sub);border-top:3px solid transparent}
+.nav button.act{color:var(--forest);border-top-color:var(--forest)}
+.nav button span{display:block;font-size:16px;line-height:1.1}
+textarea.field{resize:vertical;min-height:58px}
+.mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:11.5px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+label.lbl{display:block;font-size:11.5px;color:var(--sub);margin:8px 0 4px;font-weight:600}
+.toast{position:fixed;left:50%;bottom:calc(76px + env(safe-area-inset-bottom));transform:translateX(-50%);background:#17342b;color:#eaf5ef;border-radius:999px;padding:8px 16px;font-weight:700;font-size:13px;z-index:9;animation:rise .3s ease}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<nav class="nav"><div class="in" id="nav"></div></nav>
+
+<script>
+/* ============================================================
+   ALFA DADDY TRACKER · v11.1 · companion to the Alfa Daddy Diet v11.0
+   Everything is stored on this device (localStorage). No accounts, no servers.
+   ============================================================ */
+const APP_VERSION="11.1";
+const PLAN={kcal:1960,protein:240,paceLow:1.6,paceHigh:1.9,weeks:20};
+const PROTEINS={
+  sockeye:{label:"Sockeye salmon",short:"Sockeye",kcal:340,p:47,note:"Sockeye night: no Cholula, no EVOO",raw:"240g raw"},
+  chicken:{label:"Chicken breast",short:"Chicken",kcal:305,p:57,raw:"240g raw"},
+  beef:{label:"Lean beef",short:"Beef",kcal:340,p:54,raw:"240g raw"},
+  pork:{label:"Pork loin centre cut",short:"Pork",kcal:320,p:54,raw:"240g raw"},
+  shrimp:{label:"Shrimp",short:"Shrimp",kcal:185,p:38,raw:"230g raw"},
+};
+const ROTATION=[null,"sockeye","chicken","beef","pork","shrimp",null]; /* Sun..Sat */
+const MEAL_TIMES={wake:6.5,bowl:8,lunch:12.5,fairlife:15.5,dinner:18,casein:19.75};
+
+function buildMeals(dow,training,proteinKey){
+  const pk=proteinKey||ROTATION[dow];const P=pk?PROTEINS[pk]:null;
+  return [
+    {id:"wake",time:"06h30",title:"Wake stack",badge:"before the window",tone:"sky",items:[
+      {id:"synthroid",n:"Synthroid 150mcg",q:"empty stomach · 30 to 60 min before food",kcal:0,p:0},
+      {id:"compounds",n:"Personal compounds",q:"wake + 45 · per your separate protocol",kcal:0,p:0},
+      {id:"bottle1",n:"Bottle 1 opens",q:"sip through the morning",kcal:0,p:0}]},
+    {id:"bowl",time:"08h00",title:"Cream of Rice Bowl",badge:"~415 kcal · 42g P",tone:"green",items:[
+      {id:"elev8",n:"Elev8 Creamy Rice · 1 scoop (40g dry)",q:"cook with water",kcal:117,p:3},
+      {id:"iso1",n:"VRAC ISO dark chocolate · 1 scoop (30g)",q:"stir in OFF the heat",kcal:115,p:27},
+      {id:"eggs",n:"Whole eggs · 2, on the side",q:"the day's fat floor · never whites only",kcal:140,p:12},
+      {id:"blueb",n:"Blueberries · ½ cup (~75g)",q:"daily · fresh or Kirkland frozen",kcal:42,p:0}]},
+    {id:"lunch",time:"12h30",title:"Lunch · plate, round 1",badge:"~505 kcal · 63g P",tone:"green",items:[
+      {id:"chicken",n:"Chicken breast · 185g cooked",q:"grilled or oven · Cholula free pour",kcal:305,p:57},
+      {id:"rice1",n:"Jasmine rice · 125g cooked",q:"weighed cooked, the scale decides",kcal:162,p:3},
+      {id:"veg1",n:"Vegetables · 150g",q:"broccoli, beans or peppers",kcal:40,p:3}]},
+    {id:"fairlife",time:"15h30",title:"Fairlife shake",badge:"protected · never cut",tone:"gold",items:[
+      {id:"shake",n:"Fairlife Nutrition Plan · chocolate",q:"the untouchable",kcal:150,p:30},
+      {id:"crea1",n:"Creatine 5g · scoop 1 of 2",q:"shake it in",kcal:0,p:0},
+      {id:"cleanse1",n:"Daily Cleanse · scoop 1 of 2",q:"8g soluble fiber",kcal:60,p:2}]},
+    {id:"dinner",time:"18h00",title:"Dinner · plate, round 2",badge:P?`~${P.kcal+162+(pk==="sockeye"?40:80)+5} kcal · ${P.p+6}g P`:"pick tonight's protein",tone:"green",note:P?P.note:null,picker:true,pk,items:[
+      {id:"protein2",n:P?`${P.label} · 185g cooked`:"Rotation protein · 185g cooked",q:P?"tonight's protein, cooked weight":"tap a protein above to set the macros",kcal:P?P.kcal:300,p:P?P.p:50},
+      {id:"rice2",n:"Jasmine rice · 125g cooked",q:"same batch as lunch",kcal:162,p:3},
+      {id:"veg2",n:pk==="sockeye"?"Vegetables · 150g (no EVOO tonight)":"Vegetables · 150g + EVOO 1 tsp",q:pk==="sockeye"?"the fish brings its own fat":"the teaspoon lives here",kcal:pk==="sockeye"?40:80,p:3}]},
+    {id:"casein",time:"19h45",title:"Casein window",badge:"closes 20h00 · 47g P",tone:"green",items:[
+      {id:"yogurt",n:"Greek yogurt 0% · 200g",q:"casein base · overnight amino release",kcal:110,p:20},
+      {id:"iso2",n:"VRAC ISO · 1 scoop, stirred in",q:"same tub as the morning bowl",kcal:115,p:27},
+      {id:"crea2",n:"Creatine 5g · scoop 2 of 2",q:"stirs invisibly in",kcal:0,p:0},
+      {id:"cleanse2",n:"Daily Cleanse · scoop 2 of 2",q:"overnight fiber",kcal:60,p:2},
+      ...(training?[{id:"bluebN",n:"Frozen blueberries · 40g",q:"training days only",kcal:23,p:0}]:[])]},
+  ];
+}
+
+const RULES=[
+  ["The window is 08h00 to 20h00.","Twelve hours eating, twelve hours fasted. The 20h00 close is hard: nothing after, not even a berry."],
+  ["The 15h30 Fairlife is protected.","It never gets cut, moved or traded, whatever else changes in any future version."],
+  ["Protein is the skeleton.","Every meal anchors on its protein first. Cuts come from carbs or fat, never from protein."],
+  ["One ISO tub, two jobs.","VRAC ISO dark chocolate goes in the 08h00 bowl and the 19h45 yogurt. Half empty means reorder."],
+  ["Blueberries: half a cup daily at breakfast.","The 40g casein window portion stays training days only."],
+  ["Rice is weighed cooked: 125g per plate.","Batch cook Sunday, portion cold. The scale decides, not the eye."],
+  ["Cholula flows free at lunch and dinner,","except sockeye days. The fish stands alone."],
+  ["Eggs stay whole.","Two per morning. The yolks carry the day's fat floor; never swap them for whites."],
+  ["Water is 3L by 20h00,","on the checkpoint gauge. Training days add a 4th bottle from 15h30."],
+  ["One weigh-in per week.","Same day, same conditions: on wake, after the bathroom, before food or water."],
+  ["Two flat weeks triggers the stall protocol,","and the first lever is always rice to 100g, never a skipped meal and never the protein."],
+  ["Groceries default to Costco Canada.","Powders from Shop Santé (ISO) and Elev8 Foods (Creamy Rice)."],
+  ["Stop B-complex 3 days before every blood draw.","Draws anchor at weeks 10 and 20."],
+  ["If hunger wins a battle, it loses the war at the casein window.","A bigger yogurt beats a broken 20h00 close, every time."],
+];
+
+const SHOP=[
+  {store:"Costco Canada · the weekly run",items:[
+    ["eggs","Eggs, large","14 (one 18 pack)"],["blue","Blueberries, fresh or Kirkland frozen","~525g + 40g per training night"],
+    ["yog","Greek yogurt 0%, plain","1.4 kg (2 × 750g tubs)"],["fair","Fairlife Nutrition Plan, chocolate","7 bottles"],
+    ["chk","Chicken breast","~2 kg raw (7 lunches + 1 dinner)"],["sock","Sockeye salmon","~240g raw"],["beef","Lean beef, sirloin or extra lean","~240g raw"],
+    ["pork","Pork loin centre cut, trimmed","~240g raw"],["shr","Raw shrimp","~230g raw"],["pick","Weekend picks, 2 dinners","~480g raw of your favorites"],
+    ["rice","Jasmine rice","~600g dry (1.75 kg cooked, 14 plates)"],["veg","Vegetables: broccoli, beans, peppers","~2.1 kg (14 × 150g)"],
+    ["evoo","Kirkland EVOO","pantry check"],["chol","Cholula Original","pantry check"]]},
+  {store:"Shop Santé",items:[["iso","VRAC ISO dark chocolate","420g per week (14 scoops) · 1 lb bag ≈ 1 week"]]},
+  {store:"Elev8 Foods",items:[["cor","Elev8 Creamy Rice","280g per week (7 scoops) · 25 serving bag ≈ 3.5 weeks"]]},
+  {store:"Supplement shelf",items:[["crea","Creatine monohydrate","70g per week"],["cln","Daily Cleanse","14 scoops per week"],["syn","Synthroid 150mcg","refill check"]]},
+];
+const PREP=[["p1","Batch cook jasmine rice","1.75 kg cooked, portion 14 × 125g cold"],["p2","Cook and portion chicken","8 × 185g cooked"],["p3","Portion the dinner proteins by day","Mon sockeye · Wed beef · Thu pork · Fri shrimp, freeze the far ones"],["p4","Wash and bag vegetables","14 × 150g"],["p5","Boil a batch of eggs","or plan the pan for the week"],["p6","Restock the ISO and Creamy Rice tubs","half empty means reorder"],["p7","Fairlife in the fridge door","7 bottles, cold and visible"]];
+
+/* ===================== storage ===================== */
+const pad=n=>String(n).padStart(2,"0");
+const keyFor=d=>`${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+const todayKey=()=>keyFor(new Date());
+const parseKey=k=>new Date(k+"T12:00:00");
+const LS_OK=(()=>{try{localStorage.setItem("alfa:test","1");localStorage.removeItem("alfa:test");return true}catch(e){return false}})();
+function load(k,fb){try{const v=localStorage.getItem(k);return v?JSON.parse(v):fb}catch(e){return fb}}
+function save(k,v){try{localStorage.setItem(k,JSON.stringify(v));return true}catch(e){return false}}
+const freshDay=()=>({items:{},water:0,training:false,notes:"",protein:null,session:""});
+
+let dateKey=todayKey();
+let day=load("alfa:day:"+dateKey,freshDay());
+let log=load("alfa:log",{weights:[],days:{}});
+let settings=load("alfa:settings",{startDate:"",startWeight:"",goalWeight:"",weighDay:0});
+let shop=load("alfa:shop",{items:{},prep:{},since:todayKey()});
+let tab="today",confirmReset=false,closedBanner=false,selDay=null,hmOffset=0,toastMsg="";
+let swState="online only";
+
+function persist(){
+  save("alfa:day:"+dateKey,day);
+  const s=statsFor(day,parseKey(dateKey).getDay());
+  log.days[dateKey]={pct:s.pct,water:day.water,training:day.training,kcal:s.kcal,p:s.p};
+  save("alfa:log",log);
+}
+function rollDay(){const k=todayKey();if(k!==dateKey){dateKey=k;day=load("alfa:day:"+dateKey,freshDay());render()}}
+setInterval(()=>{rollDay();if(tab==="today")render()},60000);
+document.addEventListener("visibilitychange",()=>{if(!document.hidden){rollDay();render()}});
+
+/* ===================== helpers ===================== */
+const esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const fmtDate=d=>d.toLocaleDateString("en-CA",{weekday:"long",month:"long",day:"numeric"});
+const buzz=()=>{try{navigator.vibrate&&navigator.vibrate(8)}catch(e){}};
+function toast(m){toastMsg=m;render();setTimeout(()=>{toastMsg="";render()},1800)}
+function statsFor(d,dow){
+  const meals=buildMeals(dow,d.training,d.protein);
+  const all=meals.flatMap(m=>m.items);
+  const done=all.filter(i=>d.items[i.id]);
+  const sum=(arr,k)=>arr.reduce((a,i)=>a+i[k],0);
+  return{meals,ids:all.map(i=>i.id),done:done.length,total:all.length,pct:all.length?Math.round(done.length/all.length*100):0,kcal:sum(done,"kcal"),p:sum(done,"p"),planKcal:sum(all,"kcal"),planP:sum(all,"p")};
+}
+function nowHour(){const n=new Date();return n.getHours()+n.getMinutes()/60}
+function windowState(){
+  const h=nowHour();
+  if(h<8)return{cls:"fast",label:"Fasted · window opens 08h00"};
+  if(h<19){const left=20-h;return{cls:"open",label:`Window open · closes 20h00 · ${Math.floor(left)}h${pad(Math.round((left%1)*60))} left`}}
+  if(h<20){const m=Math.round((20-h)*60);return{cls:"late",label:`Kitchen closes in ${m} min · casein window is now`}}
+  return{cls:"closed",label:"Kitchen closed · 20h00 has passed"};
+}
+function nowNext(meals){
+  const h=nowHour();const order=meals.map(m=>({...m,t:MEAL_TIMES[m.id]}));
+  let cur=null,nxt=null;for(const m of order){if(m.t<=h)cur=m;else if(!nxt)nxt=m}
+  const isDone=m=>m.items.every(i=>day.items[i.id]);
+  if(cur&&!isDone(cur)){const left=cur.items.filter(i=>!day.items[i.id]).length;return{k:"Now",v:`${cur.time} · ${cur.title}`,s:`${left} of ${cur.items.length} boxes still open`,id:cur.id}}
+  if(nxt){const d=nxt.t-h;const s=d>=1?`in ${Math.floor(d)}h${pad(Math.round((d%1)*60))}`:`in ${Math.round(d*60)} min`;return{k:"Next",v:`${nxt.time} · ${nxt.title}`,s,id:nxt.id}}
+  if(h>=20)return{k:"Closed",v:"Kitchen closed",s:"Everything logged. Sleep is the last supplement.",id:null};
+  return{k:"Now",v:"All caught up",s:"Nothing open right now",id:null};
+}
+function waterExpected(h){const cp=[[12,2],[14.5,3],[16,4],[18.5,5],[20,6]];let e=0;for(const[t,n]of cp)if(h>=t)e=n;return e}
+function weekInfo(){
+  if(!settings.startDate)return null;
+  const days=Math.floor((parseKey(dateKey)-parseKey(settings.startDate))/86400000);
+  if(days<0)return null;const wk=Math.floor(days/7)+1;
+  let flag="";if(wk===9||wk===19)flag="blood work next week · stop B-complex 3 days before";else if(wk===10||wk===20)flag="blood work week";
+  return{wk,flag};
+}
+function streaks(){
+  const keys=Object.keys(log.days).sort();if(!keys.length)return{cur:0,best:0};
+  let best=0,run=0,prev=null;
+  for(const k of keys){const ok=log.days[k].pct===100;const cont=prev&&(parseKey(k)-parseKey(prev))/86400000===1;run=ok?(cont?run+1:1):0;if(run>best)best=run;prev=k}
+  let cur=0;const d=new Date();if(!(log.days[keyFor(d)]&&log.days[keyFor(d)].pct===100))d.setDate(d.getDate()-1);
+  while(log.days[keyFor(d)]&&log.days[keyFor(d)].pct===100){cur++;d.setDate(d.getDate()-1)}
+  return{cur,best};
+}
+function pace(){
+  const ws=log.weights;if(ws.length<2)return null;
+  const last=ws[ws.length-1];const cutoff=parseKey(last.d);cutoff.setDate(cutoff.getDate()-35);
+  let first=ws.find(w=>parseKey(w.d)>=cutoff)||ws[0];if(first===last)first=ws[ws.length-2];
+  const weeks=(parseKey(last.d)-parseKey(first.d))/604800000;if(weeks<=0)return null;
+  const perWeek=(first.w-last.w)/weeks;
+  let cls="ok",text=`On pace: ${perWeek.toFixed(1)} lb/week, right in the 1.6 to 1.9 band.`;
+  if(perWeek<1.2){cls="slow";text=`${perWeek.toFixed(1)} lb/week, under the band. Two flat weeks triggers the push lever: rice to 100g at both plates, never the protein.`}
+  else if(perWeek<1.6){cls="slow";text=`${perWeek.toFixed(1)} lb/week, a touch under the band. Hold the line one more week before touching a lever.`}
+  else if(perWeek>2.3){cls="fast";text=`${perWeek.toFixed(1)} lb/week, faster than planned. Watch hunger and gym strength; the add back lever (half avocado at dinner) is there if either dips.`}
+  let eta=null;const goal=parseFloat(settings.goalWeight);
+  if(goal&&perWeek>0&&last.w>goal){const d=parseKey(last.d);d.setDate(d.getDate()+Math.round((last.w-goal)/perWeek*7));eta=d}
+  return{perWeek,cls,text,eta,last};
+}
+
+/* ===================== actions ===================== */
+window.setTab=t=>{tab=t;confirmReset=false;render();window.scrollTo(0,0)};
+window.toggleTraining=()=>{day.training=!day.training;persist();render()};
+window.setSession=v=>{day.session=v;persist()};
+window.setProtein=k=>{day.protein=day.protein===k?null:k;persist();render()};
+window.toggleItem=id=>{
+  day.items[id]=!day.items[id];persist();buzz();
+  const s=statsFor(day,new Date().getDay());
+  if(s.done===s.total&&s.total){closedBanner=true;setTimeout(()=>{closedBanner=false;render()},2800)}
+  render();
+};
+window.setWater=i=>{day.water=(day.water===i+1)?i:i+1;persist();buzz();render()};
+window.saveNotes=v=>{day.notes=v;persist()};
+window.saveWeight=()=>{
+  const el=document.getElementById("wIn");const w=parseFloat(el.value);const waistEl=document.getElementById("waistIn");const waist=waistEl?parseFloat(waistEl.value):NaN;
+  if(!w||w<80||w>500){el.focus();return}
+  const entry={d:dateKey,w};if(waist)entry.waist=waist;
+  log.weights=[...log.weights.filter(x=>x.d!==dateKey),entry].sort((a,b)=>a.d<b.d?-1:1);
+  save("alfa:log",log);el.value="";toast("Weigh-in logged");
+};
+window.jumpTo=id=>{const el=document.getElementById("meal-"+id);if(el)el.scrollIntoView({behavior:"smooth",block:"center"})};
+window.setSetting=(k,v)=>{settings[k]=v;save("alfa:settings",settings);render()};
+window.toggleShop=id=>{shop.items[id]=!shop.items[id];save("alfa:shop",shop);buzz();render()};
+window.togglePrep=id=>{shop.prep[id]=!shop.prep[id];save("alfa:shop",shop);buzz();render()};
+window.newWeek=()=>{shop={items:{},prep:{},since:todayKey()};save("alfa:shop",shop);toast("Fresh list for the week")};
+window.pickDay=k=>{selDay=selDay===k?null:k;render()};
+window.moveMonth=n=>{hmOffset+=n;selDay=null;render()};
+window.askReset=v=>{confirmReset=v;render()};
+window.resetAll=()=>{Object.keys(localStorage).filter(k=>k.startsWith("alfa:")).forEach(k=>localStorage.removeItem(k));day=freshDay();log={weights:[],days:{}};settings={startDate:"",startWeight:"",goalWeight:"",weighDay:0};shop={items:{},prep:{},since:todayKey()};confirmReset=false;render()};
+
+function downloadText(name,text,type){const blob=new Blob([text],{type});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=name;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},600)}
+function backupJSON(){const out={};Object.keys(localStorage).filter(k=>k.startsWith("alfa:")).forEach(k=>{out[k]=localStorage.getItem(k)});return JSON.stringify({app:"alfa-daddy-tracker",version:APP_VERSION,exported:new Date().toISOString(),data:out})}
+window.downloadBackup=()=>downloadText(`alfa-daddy-backup-${todayKey()}.json`,backupJSON(),"application/json");
+window.copyBackup=async()=>{try{await navigator.clipboard.writeText(backupJSON());toast("Backup copied")}catch(e){toast("Copy blocked, use download")}};
+window.importBackup=()=>{
+  const ta=document.getElementById("importIn");
+  try{const obj=JSON.parse(ta.value.trim());const data=obj.data||obj;let n=0;
+    Object.keys(data).forEach(k=>{if(k.startsWith("alfa:")){localStorage.setItem(k,typeof data[k]==="string"?data[k]:JSON.stringify(data[k]));n++}});
+    if(!n)throw 0;
+    day=load("alfa:day:"+dateKey,freshDay());log=load("alfa:log",{weights:[],days:{}});settings=load("alfa:settings",settings);shop=load("alfa:shop",shop);
+    ta.value="";toast(`Restored ${n} entries`)}catch(e){toast("Not an Alfa Daddy backup")}
+};
+window.importFile=ev=>{const f=ev.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{document.getElementById("importIn").value=r.result;importBackup()};r.readAsText(f)};
+window.exportCSV=()=>{
+  const wmap={};log.weights.forEach(w=>{wmap[w.d]=w});
+  const keys=Array.from(new Set([...Object.keys(log.days),...Object.keys(wmap)])).sort();
+  const rows=[["date","boxes_checked_pct","water_l","training","kcal_logged","protein_g_logged","weight_lb","waist_in"]];
+  keys.forEach(k=>{const d=log.days[k]||{};const w=wmap[k]||{};rows.push([k,d.pct==null?"":d.pct,d.water==null?"":d.water/2,d.training==null?"":(d.training?"yes":"no"),d.kcal==null?"":d.kcal,d.p==null?"":d.p,w.w==null?"":w.w,w.waist==null?"":w.waist])});
+  downloadText(`alfa-daddy-log-${todayKey()}.csv`,rows.map(r=>r.join(",")).join("\r\n"),"text/csv");
+};
+function icsEvent(uid,title,desc,hh,mm,rrule,alarmMin,startDate){
+  const d=startDate||new Date();const dt=`${d.getFullYear()}${pad(d.getMonth()+1)}${pad(d.getDate())}T${pad(hh)}${pad(mm)}00`;
+  return ["BEGIN:VEVENT",`UID:${uid}@alfadaddy`,`DTSTAMP:${new Date().toISOString().replace(/[-:]/g,"").slice(0,15)}Z`,`DTSTART:${dt}`,"DURATION:PT15M",`RRULE:${rrule}`,`SUMMARY:${title}`,`DESCRIPTION:${desc}`,"BEGIN:VALARM","ACTION:DISPLAY",`TRIGGER:-PT${alarmMin}M`,`DESCRIPTION:${title}`,"END:VALARM","END:VEVENT"].join("\r\n");
+}
+function icsWrap(name,events){return ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Alfa Daddy//Tracker//EN","CALSCALE:GREGORIAN",`X-WR-CALNAME:${name}`,...events,"END:VCALENDAR"].join("\r\n")}
+window.icsMeals=()=>{
+  const ev=[icsEvent("bowl","08h00 · Cream of Rice Bowl","Elev8 + VRAC ISO + 2 eggs + blueberries. Fast opens.",8,0,"FREQ=DAILY",0),
+    icsEvent("lunch","12h30 · Lunch plate","Chicken 185g, rice 125g, vegetables. Water checkpoint: 1L in.",12,30,"FREQ=DAILY",0),
+    icsEvent("fairlife","15h30 · Fairlife shake (protected)","Fairlife + creatine 5g + Daily Cleanse scoop 1.",15,30,"FREQ=DAILY",0),
+    icsEvent("dinner","18h00 · Dinner plate","Rotation protein 185g, rice 125g, vegetables + EVOO.",18,0,"FREQ=DAILY",0),
+    icsEvent("casein","19h45 · Casein window","Greek yogurt 200g + ISO + creatine 5g + Daily Cleanse scoop 2. Kitchen closes at 20h00.",19,45,"FREQ=DAILY",0),
+    icsEvent("close","20h00 · Kitchen closed","Nothing after, not even a berry.",20,0,"FREQ=DAILY",0)];
+  downloadText("alfa-daddy-meals.ics",icsWrap("Alfa Daddy · Meals",ev),"text/calendar");
+};
+window.icsWater=()=>{
+  const ev=[[12,0,"1 of 3"],[14,30,"1.5 of 3"],[16,0,"2 of 3"],[18,30,"2.5 of 3"],[20,0,"3 of 3"]].map(([h,m,t],i)=>icsEvent("water"+i,`Water · ${t} bottles in`,"Alfa Daddy hydration checkpoint.",h,m,"FREQ=DAILY",0));
+  downloadText("alfa-daddy-water.ics",icsWrap("Alfa Daddy · Water",ev),"text/calendar");
+};
+window.icsWeigh=()=>{
+  const days=["SU","MO","TU","WE","TH","FR","SA"];const d=new Date();while(d.getDay()!==Number(settings.weighDay))d.setDate(d.getDate()+1);
+  const ev=[icsEvent("weigh","Weekly weigh-in","On wake, after the bathroom, before food or water. Log it in Alfa Daddy.",6,45,`FREQ=WEEKLY;BYDAY=${days[settings.weighDay]}`,0,d)];
+  downloadText("alfa-daddy-weigh-in.ics",icsWrap("Alfa Daddy · Weigh-in",ev),"text/calendar");
+};
+
+/* ===================== render: header ===================== */
+function header(s){
+  const dash=(s.pct/100*150.8).toFixed(1);const wi=weekInfo();
+  return `<div class="hero">
+    <div class="row">
+      <div style="min-width:0"><div class="brand">ALFA DADDY</div><div class="brandsub">${wi?`Week ${wi.wk} of ${PLAN.weeks} · `:""}${esc(fmtDate(new Date()))}</div>${wi&&wi.flag?`<div class="brandsub" style="color:#ffe3a3;font-weight:700">${esc(wi.flag)}</div>`:""}</div>
+      <button class="gear" onclick="setTab('settings')" aria-label="Settings">⚙</button>
+      <div class="ring"><svg width="56" height="56" viewBox="0 0 56 56">
+        <circle cx="28" cy="28" r="24" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="5"/>
+        <circle class="fg" cx="28" cy="28" r="24" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-dasharray="${dash} 150.8" transform="rotate(-90 28 28)"/>
+      </svg><div class="pct">${s.pct}%</div></div>
+    </div>
+    <div class="tally">
+      <div><b>${s.kcal.toLocaleString()} <span style="font-size:11px;color:#d7ece4">/ ${s.planKcal.toLocaleString()}</span></b><span>kcal logged</span></div>
+      <div><b>${s.p}g <span style="font-size:11px;color:#d7ece4">/ ${s.planP}g</span></b><span>protein logged</span></div>
+      <div><b>${(day.water/2).toFixed(1)}L <span style="font-size:11px;color:#d7ece4">/ ${day.training?4:3}L</span></b><span>water</span></div>
+    </div>
+    <button class="toggle ${day.training?"on":""}" onclick="toggleTraining()"><span class="lbl">${day.training?"Training day":"Rest day"}</span><span class="knob"></span></button>
+    ${day.training?`<input class="sess" value="${esc(day.session)}" placeholder="Session (push, pull, legs, arms…)" oninput="setSession(this.value)">`:""}
+    <div class="hint">${day.training?"Bottle 4 opens at 15h30 · 40g blueberries allowed in the casein window":"3 bottles today · the casein window stays berry free"}</div>
+  </div>`;
+}
+
+/* ===================== render: today ===================== */
+function todayView(s){
+  const w=windowState();const nn=nowNext(s.meals);
+  let h="";
+  if(!LS_OK)h+=`<div class="status closed">This browser is blocking on-device storage (private mode?). Today works, but nothing is saved.</div>`;
+  if(closedBanner)h+=`<div class="banner">Day closed clean · every box in · see you at 08h00</div>`;
+  h+=`<div class="status ${w.cls}">${esc(w.label)}</div>`;
+  h+=`<div class="nowcard"><div><div class="k">${nn.k}</div><div class="v">${esc(nn.v)}</div><div class="s">${esc(nn.s)}</div></div>${nn.id?`<button class="cta" onclick="jumpTo('${nn.id}')">Go</button>`:""}</div>`;
+  for(const m of s.meals){
+    const done=m.items.every(i=>day.items[i.id]);
+    h+=`<div id="meal-${m.id}" class="card ${done?"done":""} ${nn.id===m.id&&nn.k==="Now"?"now":""}"><div class="chead"><span class="tpill">${m.time}</span><span class="ttl">${esc(m.title)}</span><span class="badge ${m.tone}">${esc(m.badge)}</span></div>`;
+    if(m.picker){h+=`<div class="chips">`;for(const k of Object.keys(PROTEINS))h+=`<button class="chip ${m.pk===k?"on":""}" onclick="setProtein('${k}')">${esc(PROTEINS[k].short)}</button>`;h+=`</div>`}
+    if(m.note)h+=`<div class="note">${esc(m.note)}</div>`;
+    h+=`<div class="items">`;
+    for(const it of m.items){const on=!!day.items[it.id];
+      h+=`<button class="item ${on?"on":""}" onclick="toggleItem('${it.id}')"><span class="box">${on?"✓":""}</span><span style="min-width:0"><span class="n">${esc(it.n)}</span><span class="q">${esc(it.q)}</span></span>${it.kcal?`<span class="m">${it.kcal} kcal<br>${it.p}g P</span>`:""}</button>`}
+    h+=`</div></div>`;
+  }
+  const goal=day.training?8:6;const exp=waterExpected(nowHour());const behind=exp-day.water;
+  h+=`<div class="card"><div class="sec"><div class="between"><h3>Water gauge</h3><span style="font-size:13px;font-weight:700;color:var(--sky)">${(day.water/2).toFixed(1)}L of ${goal/2}L</span></div>
+    <div class="sub">Tap to fill · 1 by 12h00 · 1.5 by 14h30 · 2 by 16h00 · 2.5 by 18h30 · 3 by 20h00</div><div class="water">`;
+  for(let i=0;i<goal;i++)h+=`<button class="seg ${i<day.water?"on":""} ${i>=6?"train":""}" onclick="setWater(${i})" aria-label="half litre ${i+1}"></button>`;
+  h+=`</div>${behind>0?`<span class="nudge behind">Behind by ${(behind/2).toFixed(1)}L for this time of day</span>`:`<span class="nudge ok">${exp?"On track with the checkpoints":"Bottle 1 in progress"}</span>`}</div></div>`;
+  const last=log.weights[log.weights.length-1];const sw=parseFloat(settings.startWeight)||(log.weights[0]?log.weights[0].w:null);
+  h+=`<div class="card"><div class="sec"><h3>Weekly weigh-in</h3><div class="sub">Same day, same conditions: on wake, after the bathroom, before food or water.</div>
+    <div class="grid2"><input id="wIn" class="field" type="number" inputmode="decimal" step="0.1" placeholder="Weight (lb)"><input id="waistIn" class="field" type="number" inputmode="decimal" step="0.1" placeholder="Waist (in), optional"></div><button class="btn primary" style="width:100%;margin-top:8px" onclick="saveWeight()">Log this week's weigh-in</button>
+    ${last?`<div class="small">Last: ${last.w} lb on ${last.d}${sw?` <b style="color:${last.w-sw<=0?"var(--forest)":"var(--clay)"}">· ${last.w-sw>0?"+":""}${(last.w-sw).toFixed(1)} lb since start</b>`:""}</div>`:""}
+  </div></div>`;
+  h+=`<div class="card"><div class="sec"><h3>Day notes</h3><textarea id="notes" class="field" style="margin-top:8px" placeholder="Hunger, energy, the gym, anything worth remembering…" oninput="saveNotes(this.value)">${esc(day.notes||"")}</textarea></div></div>`;
+  h+=`<div class="pin">08h00 bowl · 12h30 plate · 15h30 Fairlife · 18h00 plate · 19h45 casein · 20h00 closed · 3L in</div>`;
+  return h;
+}
+
+/* ===================== render: progress ===================== */
+function weightChart(ws){
+  const W=420,H=140,p=10;const vals=ws.map(x=>x.w);const goal=parseFloat(settings.goalWeight);
+  let min=Math.min(...vals),max=Math.max(...vals);if(goal&&goal>min-15)min=Math.min(min,goal);min-=1;max+=1;if(max-min<4){max+=2;min-=2}
+  const x=i=>p+(i/Math.max(ws.length-1,1))*(W-2*p), y=v=>p+(1-(v-min)/(max-min))*(H-2*p);
+  const d=ws.map((pt,i)=>`${i?"L":"M"}${x(i).toFixed(1)},${y(pt.w).toFixed(1)}`).join(" ");
+  const dots=ws.map((pt,i)=>`<circle cx="${x(i)}" cy="${y(pt.w)}" r="4" fill="var(--forest)"/>`).join("");
+  const goalLine=goal&&goal>=min&&goal<=max?`<line x1="${p}" x2="${W-p}" y1="${y(goal)}" y2="${y(goal)}" stroke="var(--gold)" stroke-width="1.5" stroke-dasharray="5 4"/><text x="${W-p}" y="${y(goal)-5}" font-size="10" fill="var(--gold)" text-anchor="end">goal ${goal}</text>`:"";
+  return `<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:140px;margin-top:8px">${goalLine}<path d="${d}" fill="none" stroke="var(--jade)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>${dots}
+    <text x="${p}" y="${y(ws[0].w)-8}" font-size="11" fill="var(--sub)">${ws[0].w}</text>
+    <text x="${x(ws.length-1)-4}" y="${y(ws[ws.length-1].w)-8}" font-size="11" fill="var(--forest)" font-weight="700" text-anchor="end">${ws[ws.length-1].w}</text></svg>`;
+}
+function heatmap(){
+  const base=new Date();base.setDate(1);base.setMonth(base.getMonth()+hmOffset);
+  const y=base.getFullYear(),m=base.getMonth();const first=new Date(y,m,1);const days=new Date(y,m+1,0).getDate();
+  const startCol=(first.getDay()+6)%7;
+  let h=`<div class="mnav"><button onclick="moveMonth(-1)">‹</button><b>${base.toLocaleDateString("en-CA",{month:"long",year:"numeric"})}</b><button onclick="moveMonth(1)" ${hmOffset>=0?"disabled style='opacity:.35'":""}>›</button></div><div class="heat">`;
+  for(const d of["M","T","W","T","F","S","S"])h+=`<div class="dow">${d}</div>`;
+  for(let i=0;i<startCol;i++)h+=`<div class="blank"></div>`;
+  const tk=todayKey();
+  for(let d=1;d<=days;d++){const k=`${y}-${pad(m+1)}-${pad(d)}`;const e=log.days[k];const fut=k>tk;const lvl=!e||e.pct===0?"":e.pct===100?"l3":e.pct>=50?"l2":"l1";
+    h+=`<button class="${lvl} ${k===tk?"today":""} ${fut?"future":""} ${selDay===k?"sel":""}" ${fut?"disabled":`onclick="pickDay('${k}')"`}>${d}</button>`}
+  h+=`</div>`;
+  if(selDay){const e=log.days[selDay]||{};const dd=load("alfa:day:"+selDay,null);const w=log.weights.find(x=>x.d===selDay);
+    h+=`<div class="daydetail"><b>${esc(fmtDate(parseKey(selDay)))}</b>
+      <div class="row"><span>Boxes checked</span><b>${e.pct==null?0:e.pct}%</b></div>
+      <div class="row"><span>Water</span><b>${((e.water||0)/2).toFixed(1)}L</b></div>
+      <div class="row"><span>Logged</span><b>${e.kcal!=null?`${e.kcal} kcal · ${e.p}g protein`:"nothing"}</b></div>
+      <div class="row"><span>Day type</span><b>${e.training?`Training${dd&&dd.session?` · ${esc(dd.session)}`:""}`:"Rest"}</b></div>
+      ${w?`<div class="row"><span>Weigh-in</span><b>${w.w} lb${w.waist?` · waist ${w.waist} in`:""}</b></div>`:""}
+      ${dd&&dd.protein?`<div class="row"><span>Dinner</span><b>${esc(PROTEINS[dd.protein].label)}</b></div>`:""}
+      ${dd&&dd.notes?`<div class="row" style="display:block;color:var(--ink)"><span style="color:var(--sub)">Notes: </span>${esc(dd.notes)}</div>`:""}
+    </div>`}
+  return h;
+}
+function progressView(){
+  const st=streaks();const pc=pace();const ws=log.weights.slice(-12);
+  const dayVals=Object.values(log.days);const avgPct=dayVals.length?Math.round(dayVals.reduce((a,d)=>a+d.pct,0)/dayVals.length):0;
+  let h=`<div class="stats"><div class="stat"><b>${st.cur}</b><span>day streak, 100% days</span></div><div class="stat"><b>${st.best}</b><span>best streak</span></div><div class="stat"><b>${avgPct}%</b><span>average boxes, ${dayVals.length} days</span></div></div>`;
+  h+=`<div class="card"><div class="sec"><div class="between"><h3>Weight</h3><span class="sub">target pace ${PLAN.paceLow} to ${PLAN.paceHigh} lb/week</span></div>`;
+  h+=ws.length>=2?weightChart(ws):`<div class="sub" style="padding:18px 0;font-size:13px">Log two weigh-ins and the curve appears here. One per week is the rule; the trend is the signal, the single number is just noise.</div>`;
+  if(pc){h+=`<div class="verdict ${pc.cls}">${esc(pc.text)}${pc.eta?` At this pace you reach ${esc(settings.goalWeight)} lb around <b>${esc(pc.eta.toLocaleDateString("en-CA",{month:"long",day:"numeric",year:"numeric"}))}</b>.`:""}</div>`}
+  if(log.weights.length){h+=`<div class="wlist" style="margin-top:8px">`;log.weights.slice(-6).reverse().forEach(w=>{h+=`<div><span style="color:var(--sub)">${w.d}</span><b>${w.w} lb${w.waist?` <span style="color:var(--sub);font-weight:400">· ${w.waist} in</span>`:""}</b></div>`});h+=`</div>`}
+  h+=`</div></div>`;
+  h+=`<div class="card"><div class="sec"><h3>Calendar</h3><div class="sub">Tap a day to open it. Dark green is a 100% day.</div>${heatmap()}</div></div>`;
+  const days=[];for(let i=13;i>=0;i--){const d=new Date();d.setDate(d.getDate()-i);const k=keyFor(d);days.push({k,...(log.days[k]||{pct:0,water:0})})}
+  h+=`<div class="card"><div class="sec"><h3>Water · last 14 days</h3><div class="bars" style="height:56px">`;
+  days.forEach(d=>{const g=d.training?8:6;h+=`<div title="${d.k} · ${(d.water||0)/2}L" style="height:${Math.min((d.water||0)/8*100,100)}%;min-height:2px;background:${(d.water||0)>=g?"var(--sky)":"var(--skyfill)"}"></div>`});
+  h+=`</div><div class="axis"><span>${days[0].k.slice(5)}</span><span>today</span></div></div></div>`;
+  return h;
+}
+
+/* ===================== render: shop ===================== */
+function shopView(){
+  const total=SHOP.reduce((a,s)=>a+s.items.length,0);const done=SHOP.reduce((a,s)=>a+s.items.filter(i=>shop.items[i[0]]).length,0);
+  let h=`<div class="nowcard"><div><div class="k">Weekly list</div><div class="v">${done} of ${total} in the cart</div><div class="s">list started ${esc(shop.since)} · scaled from the plan, 7 days</div></div><button class="cta" onclick="newWeek()">New week</button></div>`;
+  for(const s of SHOP){h+=`<div class="card"><div class="sec"><h3>${esc(s.store)}</h3><div style="margin-top:6px">`;
+    for(const[id,n,q]of s.items){const on=!!shop.items[id];h+=`<button class="item ${on?"on":""}" style="padding:6px 4px" onclick="toggleShop('${id}')"><span class="box">${on?"✓":""}</span><span style="min-width:0"><span class="n">${esc(n)}</span><span class="q">${esc(q)}</span></span></button>`}
+    h+=`</div></div></div>`}
+  h+=`<div class="card"><div class="sec"><h3>Sunday prep</h3><div class="sub">Ninety minutes on Sunday buys a week of zero decisions.</div><div style="margin-top:6px">`;
+  for(const[id,n,q]of PREP){const on=!!shop.prep[id];h+=`<button class="item ${on?"on":""}" style="padding:6px 4px" onclick="togglePrep('${id}')"><span class="box">${on?"✓":""}</span><span style="min-width:0"><span class="n">${esc(n)}</span><span class="q">${esc(q)}</span></span></button>`}
+  h+=`</div></div></div>`;
+  return h;
+}
+
+/* ===================== render: plan ===================== */
+function planView(){
+  const products=[["Eggs, large","70 kcal · 6g P each"],["Blueberries","42 kcal per ½ cup"],["Greek yogurt 0%, 200g","110 kcal · 20g P"],["Fairlife Nutrition Plan chocolate","150 kcal · 30g P"],["Chicken breast, 185g cooked","305 kcal · 57g P"],["Sockeye salmon, 185g cooked","~340 kcal · 47g P"],["Lean beef, 185g cooked","~340 kcal · 54g P"],["Pork loin centre cut, 185g cooked","~320 kcal · 54g P"],["Shrimp, 185g cooked","~185 kcal · 38g P"],["Jasmine rice, 125g cooked","162 kcal · 35g C"],["Vegetables, 150g","~40 kcal"],["Kirkland EVOO, 1 tsp","40 kcal · 4.5g F"],["VRAC ISO dark chocolate, 30g scoop","~115 kcal · 27g P"],["Elev8 Creamy Rice, 40g scoop","117 kcal · 26g C"],["Daily Cleanse, 1 scoop","60 kcal · 8g fiber"]];
+  return `<div class="card"><div class="sec" style="padding-bottom:6px"><h3>Alfa Daddy Diet v11.0 · the protocol</h3><div class="sub">~1,960 kcal · ~240g protein · ~136g net carbs · ~38g fat · deficit ~790 to 940 · 1.6 to 1.9 lb/week</div></div>
+  <details open><summary>The day in one line</summary><div class="dbody">08h00 bowl · 12h30 plate · 15h30 Fairlife · 18h00 plate · 19h45 casein · 20h00 closed · 3L in</div></details>
+  <details><summary>The fourteen rules</summary><div class="dbody">${RULES.map((r,i)=>`<div class="rule"><span class="num">${i+1}</span><span><b>${esc(r[0])}</b> ${esc(r[1])}</span></div>`).join("")}</div></details>
+  <details><summary>The math and the levers</summary><div class="dbody">Maintenance sits near 2,750 to 2,900 kcal. Intake lands at ~1,850 to 2,015 depending on the dinner protein (weekly average ~1,960), a daily deficit of ~790 to 940 kcal, about 1.6 to 1.9 lb per week at 3,500 kcal per pound. Protein holds at ~240g, roughly 1.2g per pound and climbing as the scale drops.
+    <div class="lever push"><b>Push lever</b> · want ~2.0 lb/week? Rice to 100g cooked at both plates (~65 kcal/day). The only approved push; the meals never disappear.</div>
+    <div class="lever back"><b>Add back lever</b> · hunger or gym performance dips? Half an avocado returns at dinner (+120 kcal) or rice goes to 150g at both plates (+65). Add back fat or carbs; protein never needed the help.</div></div></details>
+  <details><summary>Stall protocol</summary><div class="dbody">Two consecutive flat weeks (under 0.5 lb total): pull the push lever, rice to 100g at both plates. Two more flat weeks: add a 20 minute walk after dinner before touching food again. Protein and the Fairlife are never part of any stall response. If the stall survives all of that, the next move is a diet review, not a starvation move.</div></details>
+  <details><summary>Supplements and hydration</summary><div class="dbody">Wake: Synthroid 150mcg alone, 30 to 60 min before food. Wake + 45: personal compounds per your separate protocol. 15h30: creatine 5g (1 of 2), Daily Cleanse (1 of 2), the B12/B6 scoop is optional (keto era leftover). 19h45: creatine 5g (2 of 2), Daily Cleanse (2 of 2). Blood work at weeks 10 and 20; stop B-complex 3 days before each draw.<br><br>Water: 1L per bottle. 1 by 12h00 · 1.5 by 14h30 · 2 by 16h00 · 2.5 by 18h30 · 3 by 20h00. Training days add a 4th bottle from 15h30.</div></details>
+  <details><summary>Product sheet</summary><div class="dbody">${products.map(([a,b])=>`<div class="shoprow"><span>${esc(a)}</span><span class="pm">${esc(b)}</span></div>`).join("")}<div class="small">Swap rule: any product can be replaced by an equivalent with the same macros and the same job.</div></div></details>
+  </div>`;
+}
+
+/* ===================== render: settings ===================== */
+function settingsView(){
+  const dayNames=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  let h=`<div class="card"><div class="sec"><h3>Your cut</h3><div class="sub">Powers the week counter, the blood work alerts and the goal line.</div>
+    <div class="grid2"><div><label class="lbl">Start date</label><input class="field" type="date" value="${esc(settings.startDate)}" onchange="setSetting('startDate',this.value)"></div>
+    <div><label class="lbl">Weigh-in day</label><select class="field" onchange="setSetting('weighDay',Number(this.value))">${dayNames.map((n,i)=>`<option value="${i}" ${Number(settings.weighDay)===i?"selected":""}>${n}</option>`).join("")}</select></div>
+    <div><label class="lbl">Start weight (lb)</label><input class="field" type="number" inputmode="decimal" value="${esc(settings.startWeight)}" onchange="setSetting('startWeight',this.value)"></div>
+    <div><label class="lbl">Goal weight (lb)</label><input class="field" type="number" inputmode="decimal" value="${esc(settings.goalWeight)}" onchange="setSetting('goalWeight',this.value)"></div></div>
+  </div></div>`;
+  h+=`<div class="card"><div class="sec"><h3>Reminders in your Calendar</h3><div class="sub">Each button downloads a calendar file. Open it and tap Add All; your phone then handles the alerts natively, even when this app is closed. Do this once from Safari rather than from the home screen icon.</div>
+    <div class="rowg"><button class="btn primary" onclick="icsMeals()">Meals + 20h00 close</button><button class="btn ghost" onclick="icsWater()">Water checkpoints</button><button class="btn ghost" onclick="icsWeigh()">Weekly weigh-in</button></div></div></div>`;
+  h+=`<div class="card"><div class="sec"><h3>Backup and export</h3><div class="sub">Everything lives on this device only. Back up before changing phones or clearing the browser.</div>
+    <div class="rowg"><button class="btn primary" onclick="downloadBackup()">Download backup</button><button class="btn ghost" onclick="copyBackup()">Copy backup</button><button class="btn ghost" onclick="exportCSV()">Export CSV for Excel</button></div>
+    <div class="sub" style="margin-top:12px">Restore: paste a backup below, or pick the file.</div>
+    <textarea id="importIn" class="field mono" style="margin-top:8px" placeholder='{"app":"alfa-daddy-tracker", ...}'></textarea>
+    <div class="rowg"><button class="btn ghost" onclick="importBackup()">Restore from paste</button><label class="btn ghost" style="display:inline-flex;align-items:center">Pick file<input type="file" accept="application/json,.json" style="display:none" onchange="importFile(event)"></label></div></div></div>`;
+  h+=`<div class="card"><div class="sec"><h3>About</h3><div class="sub">Alfa Daddy Tracker ${APP_VERSION} · companion to the Alfa Daddy Diet v11.0 · ${esc(swState)} · follows your phone's light or dark mode</div>
+    ${confirmReset?`<div class="rowg"><button class="btn dangerfill" onclick="resetAll()">Yes, erase everything</button><button class="btn ghost" onclick="askReset(false)">Keep it</button></div>`:`<div class="rowg"><button class="btn danger" onclick="askReset(true)">Erase all data</button></div>`}
+  </div></div>`;
+  return h;
+}
+
+/* ===================== render ===================== */
+const TABS=[["today","Today","◉"],["progress","Progress","▲"],["shop","Shop","▣"],["plan","Plan","≡"]];
+function render(){
+  const s=statsFor(day,new Date().getDay());
+  const view=tab==="today"?todayView(s):tab==="progress"?progressView():tab==="shop"?shopView():tab==="plan"?planView():settingsView();
+  document.getElementById("app").innerHTML=header(s)+view+(toastMsg?`<div class="toast">${esc(toastMsg)}</div>`:"");
+  document.getElementById("nav").innerHTML=TABS.map(([id,l,ic])=>`<button class="${tab===id?"act":""}" onclick="setTab('${id}')"><span>${ic}</span>${l}</button>`).join("");
+}
+
+/* ===================== offline (service worker) ===================== */
+if("serviceWorker"in navigator&&location.protocol.startsWith("http")){
+  navigator.serviceWorker.register("./sw.js").then(()=>{swState="offline ready";if(tab==="settings")render()}).catch(()=>{swState="offline cache unavailable"});
+}
+render();
+</script>
+</body>
+</html>
